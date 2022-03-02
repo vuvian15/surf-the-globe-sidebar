@@ -1,0 +1,81 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html 
+{
+    scroll-behavior: smooth;
+}
+
+form.form-example 
+{
+    display: table;
+}
+
+div.form-example 
+{
+    display: table-row;
+}
+
+label, input
+{
+    display: table-cell;
+    margin-bottom: 10px;
+}
+
+label 
+{
+    padding-right: 10px;
+}
+
+#darkMode
+{
+    float: right;
+}
+
+/* next 2 selectors remove arrows on form inputs  */
+/* for firefox */
+input[type=number]
+{
+    -moz-appearance: textfield;
+}
+/* for all other browsers */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button 
+{
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.header
+{
+    width: 100%;
+    height: 100vh;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+.header-text
+{
+    height: 100%;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content
+{
+    text-align: center;
+}
+
+#formTitle
+{
+    margin-bottom: 4%;
+}

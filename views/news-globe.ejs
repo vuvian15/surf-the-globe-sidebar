@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/news-globe-styles.css">
+    <script type="importmap">
+        {
+          "imports": {
+            "three": "./build/three.module.js",
+            "three/examples/jsm/controls/OrbitControls":"./jsm/controls/OrbitControls.js",
+            "three/examples/jsm/libs/stats.module":"./jsm/libs/stats.module.js",
+            "three/examples/jsm/libs/dat.gui.module":"./jsm/libs/dat.gui.module.js"
+          }
+        }
+    </script>
+</head>
+<body>
+    <div class="header" id="top">
+        <div class="header-text">
+            <div class="content">
+                <div class="latlongDisplay">
+                    <form action="/search" method="post" class="form-example" id="formSubmit">
+                        <div class="form-example">
+                            <label for="latitude">Latitude: </label>
+                            <input type="number" step="0.000001" name="latitude" id="latitude" required>
+                        </div>
+                        <div class="form-example">
+                            <label for="longitude">Longitude: </label>
+                            <input type="number" step="0.000001" name="longitude" id="longitude" required>
+                        </div>
+                        <div class="form-example">
+                            <input type="submit" value="Search">
+                        </div>
+                    </form>
+                </div>
+                <script type="module" src="./js/news-globe.js"></script>
+            </div>
+        </div>
+    </div>
+    <!-- <button id="darkMode">Dark Mode</button> -->
+    <!-- <script type="module" src="./js/news-main.js"></script> -->
+</body>
+</html>

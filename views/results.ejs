@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/results-styles.css">
+    <title>Results of Search</title>
+
+
+</head>
+<body>
+    
+    <div class="wrapper">
+        <div class="resultsHeading">
+            <h1>Welcome to results page!</h1>
+            <h2>Here are the top news stories for <%= countryName %></h1>
+            <hr>
+        </div>
+        <div class="sidenav">
+            <a href="#about">News</a>
+            <a href="#services">Basic Facts</a>
+            <a href="#clients">Culture</a>
+            <a href="#contact">Health</a>
+        </div>
+        <div class="row">
+            <% for (let i = 0; i < newsStories.length - 1; i++) { %>
+            <div class="newsStory col">
+                <h3><%= newsStories[i].title %></h3>
+                <h5>Story by <%= newsStories[i].author %></h5>
+                <p><%= newsStories[i].description %></p>
+                <p><a href="<%= newsStories[i].url %>">Read full story here</a></p>
+            </div>
+            <% } %>
+        </div>
+
+    </div>
+    <h4><a href="/">Click to go back to search page</a></h4>
+
+</body>
+</html>
