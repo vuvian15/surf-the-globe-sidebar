@@ -46,6 +46,27 @@
                 <br>
                 <i class="fas fa-arrow"></i>
         </div>
+     
+    <h1 id="basicfacts">Basic Facts</h1>
+        <h2>Here are basic facts for <%= countryName %>!</h2>
+        <p> flag, language, population, etc </p>
+    <hr>
+   
+    <h1 id="news">News</h1>
+        <h2>Here are the top news stories for <%= countryName %>!</h2>
+        <div class="articles">
+            <div class="row">
+                <% for (let i = 0; i < newsStories.length - 1; i++) { %>
+                <div class="newsStory col">
+                    <h3><%= newsStories[i].title %></h3>
+                    <h5>Story by <%= newsStories[i].author %></h5>
+                    <p><%= newsStories[i].description %></p>
+                    <p><a href="<%= newsStories[i].url %>">Read full story here</a></p>
+                </div>
+                <% } %>
+            </div>
+        </div>
+    <hr>
  
     <h1 id="culture">Culture</h1>
         <h2>Here is cultural information for <%= countryName %>!</h2>
