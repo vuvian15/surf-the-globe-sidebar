@@ -117,9 +117,9 @@ const convertToLatLong = (x, y ,z) =>
     {
         long = firstLong - 180
     }
-    latField.value = lat
-    longField.value = long
-    console.log(lat + " " + long)
+        //console.log(lat + " " + long)
+    latField.value = lat.toFixed(3) // updated
+    longField.value = long.toFixed(3) // updated
 }
 
 // establishing the "main" function or entry point into file
