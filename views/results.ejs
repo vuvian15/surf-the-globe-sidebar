@@ -11,23 +11,29 @@
 </head>
 <body>
     
-    <div class="wrapper">
-        <div class="resultsHeading">
-            <h1>WELCOME TO THE NEWS PAGE</h1>
-            <h2>Here are the top news stories for <%= countryName %>!</h1>
+     <div class="resultsHeading">
+            <h1>Welcome to <%= countryName %>'s page</h1>
             <hr>
         </div>
 
-        <div class="sidenav">
-            <a href="#news">News</a>
-            <a href="basicfacts">Basic Facts</a>
-            <a href="#culture">Culture</a>
-            <a href="#health">Health</a>
+         <div class="sidenav">  
+            <a href="#basicfacts">Basic Facts</a> 
+            <a href="#news">News</a>  
+            <a href="#culture">Culture</a> 
+            <a href="#health">Health</a> 
         </div>
 
         <div class="rightbar">
         </div>
 
+    
+    <h1 id="basicfacts">Basic Facts</h1>
+        <h2>Here are basic facts for <%= countryName %>!</h2>
+        <p> flag, language, population, etc </p>
+    <hr>
+   
+    <h1 id="news">News</h1>
+        <h2>Here are the top news stories for <%= countryName %>!</h2>
         <div class="articles">
             <div class="row">
                 <% for (let i = 0; i < newsStories.length - 1; i++) { %>
@@ -40,8 +46,17 @@
                 <% } %>
             </div>
         </div>
+    <hr>
+ 
+    <h1 id="culture">Culture</h1>
+        <h2>Here is cultural information for <%= countryName %>!</h2>
+        <p> music, movies, shows, etc </p>   
+    <hr>
 
-    </div>
+    <h1 id="health">Health</h1>
+        <h2>Here is health information for <%= countryName %>!</h2>
+        <p> covid, deathrates, etc </p>
+    <hr>
     <h4><a href="/">Click to go back to search page</a></h4>
 
 </body>
